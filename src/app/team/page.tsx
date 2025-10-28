@@ -16,7 +16,7 @@ export default function TeamPage() {
           meets emotion, and hospitality feels human again.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 pb-24">
           {/* Ajay */}
           <div className="border border-border bg-background text-text p-8 shadow-soft hover:shadow-deep transition will-change-transform hover:-translate-y-0.5">
             <h3 className="font-display text-2xl">Ajay Saini</h3>
