@@ -33,7 +33,17 @@ export const metadata: Metadata = {
   },
   description:
     "Good Room House is a design-led restaurant and boutique hospitality brand in Jaipur, India. Quiet luxury, crafted atmospheres, and soulful dining near City Palace.",
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/tab-logo.jpeg", sizes: "16x16", type: "image/jpeg" },
+      { url: "/tab-logo.jpeg", sizes: "32x32", type: "image/jpeg" },
+      { url: "/tab-logo.jpeg", sizes: "192x192", type: "image/jpeg" },
+      { url: "/tab-logo.jpeg", sizes: "512x512", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/tab-logo.jpeg", sizes: "180x180", type: "image/jpeg" }],
+    shortcut: ["/tab-logo.jpeg"],
+  },
+  themeColor: "#0E1624",
   alternates: {
     canonical: "/",
   },
