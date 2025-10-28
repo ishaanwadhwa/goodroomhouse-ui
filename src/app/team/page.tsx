@@ -1,5 +1,16 @@
-export const metadata = { title: "The Housemakers" };
 import Link from "next/link";
+
+export const metadata = {
+  title: "The Housemakers — Good Room House, Jaipur",
+  description:
+    "Founders Ajay Saini and Sahar Saini — the duo shaping Good Room House. Heritage, craft, and modern hospitality.",
+  alternates: { canonical: "/team" },
+  keywords: [
+    "Good Room House founders",
+    "Housemakers Jaipur",
+    "quiet luxury hospitality India",
+  ],
+};
 
 export default function TeamPage() {
   return (
@@ -9,6 +20,7 @@ export default function TeamPage() {
           <Link href="/" className="text-sm text-text-light hover:text-accent">← Back</Link>
         </div>
         <h1 className="font-display text-4xl md:text-5xl">The Housemakers</h1>
+        <h2 className="sr-only">Founders Ajay Saini and Sahar Saini</h2>
         <p className="mt-2 text-sm italic text-text-inverse/80">Those who built the room — and filled it with soul.</p>
         <p className="mt-6 text-text-inverse/85 max-w-3xl leading-relaxed">
           Behind Good Room House is a duo that blends legacy with instinct — a father’s vision and a daughter’s
@@ -50,6 +62,12 @@ export default function TeamPage() {
           <p className="mt-4 text-sm italic text-text-inverse/75">— Ajay & Sahar</p>
         </section>
       </section>
+      <footer className="sr-only">
+        <nav aria-label="Secondary">
+          <a href="/spirit">The Spirit of the House</a>
+          <a href="/">Home</a>
+        </nav>
+      </footer>
     </main>
   );
 }

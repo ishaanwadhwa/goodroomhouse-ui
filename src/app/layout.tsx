@@ -26,14 +26,43 @@ const body = Raleway({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://goodroomhouse.com"),
   title: {
-    default: "The good room house — Restaurant & Bar",
-    template: "%s — The good room house",
+    default: "Good Room House, Jaipur — Quiet Luxury Hospitality",
+    template: "%s — Good Room House, Jaipur",
   },
   description:
-    "A modern dining group featuring Angels and Searchers and Good Room House Bar.",
-  metadataBase: new URL("https://example.com"),
+    "Good Room House is a design-led restaurant and boutique hospitality brand in Jaipur, India. Quiet luxury, crafted atmospheres, and soulful dining near City Palace.",
   icons: { icon: "/favicon.ico" },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Good Room House",
+    title: "Good Room House, Jaipur — Quiet Luxury Hospitality",
+    description:
+      "Design-led restaurant and boutique hospitality in Jaipur. Quiet luxury near City Palace.",
+    url: "https://goodroomhouse.com/",
+    locale: "en_IN",
+    images: [
+      { url: "/og.jpg", width: 1200, height: 630, alt: "Good Room House logo on deep navy" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Good Room House, Jaipur — Quiet Luxury Hospitality",
+    description:
+      "Design-led restaurant and boutique hospitality in Jaipur. Quiet luxury near City Palace.",
+    images: ["/og.jpg"],
+  },
+  keywords: [
+    "quiet luxury restaurant Jaipur",
+    "design-led hospitality India",
+    "boutique dining Jaipur",
+    "restaurant near City Palace Jaipur",
+    "Good Room House Jaipur",
+  ],
 };
 
 export default function RootLayout({
@@ -44,6 +73,25 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${body.variable} min-h-screen font-body bg-background text-text`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              name: "Good Room House",
+              url: "https://goodroomhouse.com",
+              image: "https://goodroomhouse.com/og.jpg",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Jaipur",
+                addressRegion: "RJ",
+                addressCountry: "IN",
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
