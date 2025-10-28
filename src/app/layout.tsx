@@ -72,7 +72,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${body.variable} min-h-screen font-body bg-background text-text`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${display.variable} ${body.variable} min-h-screen font-body bg-primary-dark text-text-inverse overflow-x-hidden`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
